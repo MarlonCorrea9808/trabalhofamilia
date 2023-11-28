@@ -1,0 +1,6 @@
+/* CSS HEX - OP 2*/ 
+--lapis-lazuli: #005480ff;
+--ruddy-blue: #59a3f0ff;
+--honeydew: #ddf8e8ff;
+--mountbatten-pink: #946e83ff;
+--dark-purple: #210b2cff;

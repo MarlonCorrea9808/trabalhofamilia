@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+   
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-image: url(images/guitar+background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5em;
+    width: 90vw;
+    height: 12em;
+    top: 1.5em;
+    border: #e7e247ff solid 3px;
+    position: absolute;
+    z-index: 3;
+    border-radius: 175px;
+    background-color: #005480ff;
+    transform: translate(-50%);
+    left: 50%;
+
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+    text-shadow: 1px 1px 2px #9b7e46ff;
+    font-size: 2em;
+    color: #e7e247ff;
+    font-weight: bolder;
+    padding: 2em 1e;
+    margin: 5px 20px;
+}
+
+header nav ul li a:hover {
+    text-shadow: 1px 1px 2px orange;
+    color: #e9eddeff;
+    font-size: 2.1em;
+    transform: 0.2s;
+}
+
+header .logo img {
+    margin-left: 50px;
+    width: 100px
+}
+
+header a{
+    text-decoration: none;
+}
+
+#inicio-page {
+    text-decoration: underline;
+    
+}
+
+
+/* CONTENT - MENU */
+
+.content-main {
+    display: flex;
+    text-align: left;
+    position: relative;
+    flex-direction: column;
+    align-items: left;
+    background-attachment: fixed;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    margin-left: 5em;
+}
+
+.content-main h1 {
+    font-size: 64px;
+    color: #e9eddeff;
+    font-weight: bold;
+    padding: 5px;
+    text-shadow: 2px 2px 2px black ;
+}
+
+.content-main p{
+    padding: 5px;
+    font-size: 25px;
+    color: #e9eddeff;
+    text-shadow: 2px 2px 2px black ;
+}
+
+.content-main .buttons button{
+    margin-top: 10px;
+    color: #e7e247ff;
+    background-color: transparent;
+    border: solid #e7e247ff 1.5px;
+    border-radius: 50px;
+    font-weight: 1000;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+
+.content-main .buttons button:hover {
+    background-color: #e7e247ff;
+    color: black;
+}
+
+.content-main a {
+    color: #e7e247ff;
+    
+}.content-main a:hover {
+    background-color: #e7e247ff;
+    color: black;
+}
+
+
+
+/* CONTENT - PARALLAX */
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+}
+
+.container {
+    animation: surgir 3s ease;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
+    border-radius: 76px;
+    width: 100%;
+    max-width: 80%;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: #59a3f0ff;
+    padding: 15px 15px;
+
+}
+
+section.modulo p {
+    color: black;
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 30px;
+}
+
+section.modulo.parallax h1 {
+    color: #e9eddeff;
+    text-align: center;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px black;
+    z-index: 1;
+
+}
+
+section.modulo h2 {
+    text-shadow: 2px 2px 2px black ;
+    color: #e9eddeff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+}
+
+section.modulo.content {
+    padding: 20px 0;
+    background-color: #005480ff;
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-color: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax-1 {
+    background-image: url(/docs/images/music.jpg);
+}
+
+section.modulo.parallax-2 {
+    background-image: url(images/guitar.jpg);
+}
+
+section.modulo.parallax-3 {
+    background-image: url(images/singing.jpg);
+}
+
+section.modulo.parallax-4{
+    background-image: url(images/piano.jpg);
+}
+
+
+section.modulo.parallax::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgb(0, 0, 0, 0) 20%, #000000 100%);
+}
+
+
+@keyframes surgir {
+
+    from {
+        opacity: 0;
+        translate: -100vw 0;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+/* REGISTRO - FOOTER */
+
+.registro {
+    width: 100%;
+    border-top: 3px solid #e9eddeff;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.registro .registro-box {
+    flex: 1;
+}
+
+.registro-body {
+    min-height: 50vh;
+    background-color: #9b7e46ff;
+    height: 100%;
+}
+
+.registro-content form {
+    box-sizing: border-box;
+    padding: 50px 40px;
+}
+
+.registro-body h2 {
+    color: #e9eddeff;
+    font-size: 30px;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.cardimg img {
+width: 15px;
+}
